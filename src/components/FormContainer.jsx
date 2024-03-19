@@ -9,7 +9,7 @@ export default function FormContainer({ tasks, setTasks, setFilteredTasks }) {
 
   return (
     <div>
-      <Form addTask={addTask} />
+      <Form addTask={addTask} tasks={tasks} />
       <Filters tasks={tasks} setFilteredTasks={setFilteredTasks} />
     </div>
   );
