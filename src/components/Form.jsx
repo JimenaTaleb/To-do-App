@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from '@mui/material/Button';
 
 export default function Form({ addTask, tasks }) {
   const [task, setTask] = useState({
@@ -47,7 +48,7 @@ export default function Form({ addTask, tasks }) {
         placeholder="Ingresá una tarea"
         onChange={(e) => setTask({ ...task, title: e.target.value })}
       />
-      <button type="submit">Add Task</button>
+      <Button type="submit" variant="contained">Add Task</Button>
       {error && <p style={{ color: "red" }}>{error}</p>}
     </form>
   );
