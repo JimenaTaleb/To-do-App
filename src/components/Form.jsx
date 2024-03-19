@@ -1,38 +1,17 @@
 import { useState } from "react";
-import Button from '@mui/material/Button';
 
-export default function Form({ addTask, tasks }) {
+export default function Form({ addTask }) {
   const [task, setTask] = useState({
     title: "",
   });
 
-  const [error, setError] = useState("");
-
-  function validateTask(taskTitle) {
-    const errorMessage =
-      taskTitle.length < 3 || taskTitle.length > 20
-        ? "La tarea debe tener entre 3 y 20 caracteres."
-        : tasks.some((t) => t.title === taskTitle)
-        ? "La tarea ya existe."
-        : "";
-  
-    setError(errorMessage);
-    
-    return errorMessage === "";
-  }
-  
-
   function handleAddTask(e) {
     e.preventDefault();
-
-    const taskTitle = task.title.trim();
-    if (!validateTask(taskTitle)) return;
-
     const taskId = crypto.randomUUID();
 
     const newTask = {
       id: taskId,
-      title: taskTitle,
+      title: task.title,
     };
 
     addTask(newTask);
@@ -48,10 +27,8 @@ export default function Form({ addTask, tasks }) {
         placeholder="Ingresá una tarea"
         onChange={(e) => setTask({ ...task, title: e.target.value })}
       />
-      <Button type="submit" variant="contained">Add Task</Button>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      <button type="submit">Add Task</button>
     </form>
   );
 }
-
 
