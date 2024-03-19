@@ -9,7 +9,7 @@ export default function Header() {
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
           align="center"
           sx={{
-            fontSize: { xs: 30, md: 40, lg: 50 },
+            fontSize: { xs: 40, md: 50, lg: 60 },
           }}
         >
           To do App
@@ -19,7 +19,7 @@ export default function Header() {
           fontStyle="italic"
           align="right"
           sx={{
-            fontSize: { xs: 15, md: 25, lg: 35 },
+            fontSize: { xs: 20, md: 30, lg: 40 },
           }}
         >
           by Ji
