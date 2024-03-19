@@ -1,4 +1,5 @@
 import { Typography, Box } from "@mui/material";
+import { BsStars } from "react-icons/bs"
 
 export default function Header() {
   return (
@@ -22,7 +23,7 @@ export default function Header() {
             fontSize: { xs: 20, md: 30, lg: 40 },
           }}
         >
-          by Ji
+          by Ji <BsStars color="#fedb5a"/>
         </Typography>
       </Box>
     </header>
