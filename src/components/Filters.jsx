@@ -17,7 +17,7 @@ export default function Filters({ tasks, setFilteredTasks}) {
 
   return (
     <div>
-        <select onChange={handleFilterChange} name="" id="" style={{border: "1px solid #fbf8fc"}}>
+        <select onChange={handleFilterChange} name="" id="" style={{ width: "150px", height: "30px", border: "1px solid #fbf8fc" }}>
             <option value="all">Todas</option>
             <option value="done">Completas</option>
             <option value="pending">Pendientes</option>
