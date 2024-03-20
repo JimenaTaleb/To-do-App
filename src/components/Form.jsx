@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 export default function Form({ addTask, tasks }) {
   const [task, setTask] = useState({
@@ -42,15 +43,16 @@ export default function Form({ addTask, tasks }) {
 
   return (
     <form onSubmit={handleAddTask}>
-      <input
-        type="text"
-        value={task.title}
-        placeholder="Ingresá una tarea"
-        onChange={(e) => setTask({ ...task, title: e.target.value })}
-      />
-      <Button type="submit" variant="contained" size="small">Add Task</Button>
+      <Box display="flex" flexDirection="row" gap={1}>
+        <input
+          type="text"
+          value={task.title}
+          placeholder="Ingresá una tarea"
+          onChange={(e) => setTask({ ...task, title: e.target.value })}
+        />
+        <Button type="submit" variant="contained" size="small">Add Task</Button>
+      </Box>
       {error && <p style={{ color: "red" }}>{error}</p>}
     </form>
   );
 }
-

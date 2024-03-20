@@ -21,7 +21,7 @@ export default function Container() {
         setTasks={handleTasksChange}
         setFilteredTasks={setFilteredTasks}
       />
-       <TaskContainer
+      <TaskContainer
         tasks={tasks}
         setTasks={setTasks}
         filteredTasks={filteredTasks}

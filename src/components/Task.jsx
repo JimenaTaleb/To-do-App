@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Box } from "@mui/material";
 
 export default function Task({ task, tasks, setTasks, handleDeleteTask }) {
   const [completed, setCompleted] = useState(task.completed || false);
@@ -18,14 +19,15 @@ export default function Task({ task, tasks, setTasks, handleDeleteTask }) {
 
   return (
     <div>
-      <p>{task.title}</p>
-      <input
-        type="checkbox"
-        checked={completed}
-        onChange={handleCheckboxChange}
-      />
-      <button onClick={handleDelete}>Eliminar</button>
+      <Box display="flex" flexDirection="row">
+        <p>{task.title}</p>
+        <input
+          type="checkbox"
+          checked={completed}
+          onChange={handleCheckboxChange}
+        />
+        <button onClick={handleDelete}>Eliminar</button>
+      </Box>
     </div>
   );
 }
-
