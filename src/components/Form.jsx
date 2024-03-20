@@ -57,7 +57,7 @@ export default function Form({ addTask, tasks }) {
           style={{ width: "250px", height: "35px", border: "1px solid #fbf8fc" }}
         />
         <IconButton type="submit" variant="contained" size="small">
-          <RiAddCircleLine style={{ fontSize: "30px", color: "#0f0000"}} />
+          <RiAddCircleLine style={{ fontSize: "30px", color: "#577590"}} />
         </IconButton>
       </Box>
       {error && <p style={{ color: "red" }}>{error}</p>}
