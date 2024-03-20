@@ -11,8 +11,8 @@ export default function Form({ addTask, tasks }) {
 
   function validateTask(taskTitle) {
     const errorMessage =
-      taskTitle.length < 3 || taskTitle.length > 20
-        ? "La tarea debe tener entre 3 y 20 caracteres."
+      taskTitle.length < 3 || taskTitle.length > 25
+        ? "La tarea debe tener entre 3 y 25 caracteres."
         : tasks.some((t) => t.title === taskTitle)
         ? "La tarea ya existe."
         : "";

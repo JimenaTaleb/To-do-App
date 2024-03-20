@@ -16,7 +16,7 @@ export default function TaskContainer({
 
   return (
     <div>
-      <Box display="flex" flexDirection="column" mminheight="2800px">
+      <Box display="flex" flexDirection="column" mminheight="2800px" marginTop="50px">
         {filteredTasks.map((task) => (
           <Task
             key={task.id}

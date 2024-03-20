@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography, IconButton } from "@mui/material";
+import { FaTrashCan } from "react-icons/fa6";
+import { MdCloudDone } from "react-icons/md";
 
 export default function Task({ task, tasks, setTasks, handleDeleteTask }) {
   const [completed, setCompleted] = useState(task.completed || false);
@@ -18,15 +20,33 @@ export default function Task({ task, tasks, setTasks, handleDeleteTask }) {
   };
 
   return (
-    <div>
-      <Box display="flex" flexDirection="row">
-        <p>{task.title}</p>
-        <input
-          type="checkbox"
-          checked={completed}
-          onChange={handleCheckboxChange}
-        />
-        <button onClick={handleDelete}>Eliminar</button>
+    <div
+      style={{
+        border: "1px solid #fbf8fc",
+        padding: "0px 10px",
+        margin: "2px 0",
+      }}
+    >
+      <Box
+        width="100%"
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Typography
+          sx={{ textDecoration: completed ? "line-through" : "none" }}
+        >
+          {task.title}
+        </Typography>
+        <Box display="flex" alignItems="center">
+          <IconButton onClick={handleCheckboxChange}>
+            <MdCloudDone style={{ color: completed ? "#4caf50" : "#bdbdbd", fontSize: "27px" }} />
+          </IconButton>
+          <IconButton onClick={handleDelete}>
+            <FaTrashCan style={{ fontSize: "20px" }}/>
+          </IconButton>
+        </Box>
       </Box>
     </div>
   );
