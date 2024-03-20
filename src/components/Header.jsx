@@ -7,10 +7,10 @@ export default function Header() {
       <Box pt={5}>
         <Typography
           fontWeight={700}
-          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+          style={{ textShadow: "5px 5px 0px #efbce5" }}
           align="center"
           sx={{
-            fontSize: { xs: 40, md: 50, lg: 60 },
+            fontSize: { xs: 50, md: 60, lg: 70 },
           }}
         >
           To do App
@@ -23,7 +23,7 @@ export default function Header() {
             fontSize: { xs: 20, md: 30, lg: 40 },
           }}
         >
-          by Ji <BsStars color="#fedb5a"/>
+          by Ji <BsStars color="#fee440"/>
         </Typography>
       </Box>
     </header>
