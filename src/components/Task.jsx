@@ -41,10 +41,10 @@ export default function Task({ task, tasks, setTasks, handleDeleteTask }) {
         </Typography>
         <Box display="flex" alignItems="center">
           <IconButton onClick={handleCheckboxChange}>
-            <MdCloudDone style={{ color: completed ? "#4caf50" : "#bdbdbd", fontSize: "27px" }} />
+            <MdCloudDone style={{ color: completed ? "#009900" : "#bdbdbd", fontSize: "27px" }} />
           </IconButton>
           <IconButton onClick={handleDelete}>
-            <FaTrashCan style={{ fontSize: "20px" }}/>
+            <FaTrashCan style={{ fontSize: "20px", color: "#e60000"}}/>
           </IconButton>
         </Box>
       </Box>
