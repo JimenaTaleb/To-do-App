@@ -12,9 +12,14 @@ export default function Footer() {
       >
         &copy; 2024 - by Jimena Taleb
       </Typography>
-      <Box pb={2} display="flex" justifyContent="space-between" sx={{
+      <Box
+        pb={2}
+        display="flex"
+        justifyContent="space-between"
+        sx={{
           fontSize: { xs: 15, md: 20, lg: 25 },
-        }}>
+        }}
+      >
         <a href="https://www.linkedin.com/in/jimenataleb">
           <FaLinkedin color="black" />
         </a>
@@ -28,9 +33,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-
-
-
-

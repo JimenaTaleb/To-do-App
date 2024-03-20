@@ -54,10 +54,14 @@ export default function Form({ addTask, tasks }) {
           value={task.title}
           placeholder="Ingresá una tarea"
           onChange={(e) => setTask({ ...task, title: e.target.value })}
-          style={{ width: "250px", height: "35px", border: "1px solid #fbf8fc" }}
+          style={{
+            width: "250px",
+            height: "35px",
+            border: "1px solid #fbf8fc",
+          }}
         />
         <IconButton type="submit" variant="contained" size="small">
-          <RiAddCircleLine style={{ fontSize: "30px", color: "#577590"}} />
+          <RiAddCircleLine style={{ fontSize: "30px", color: "#577590" }} />
         </IconButton>
       </Box>
       {error && <p style={{ color: "red" }}>{error}</p>}
