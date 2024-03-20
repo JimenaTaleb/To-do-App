@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
+import { Box, IconButton } from "@mui/material";
+import { RiAddCircleLine } from "react-icons/ri";
 
 export default function Form({ addTask, tasks }) {
   const [task, setTask] = useState({
@@ -16,12 +16,11 @@ export default function Form({ addTask, tasks }) {
         : tasks.some((t) => t.title === taskTitle)
         ? "La tarea ya existe."
         : "";
-  
+
     setError(errorMessage);
-    
+
     return errorMessage === "";
   }
-  
 
   function handleAddTask(e) {
     e.preventDefault();
@@ -43,14 +42,23 @@ export default function Form({ addTask, tasks }) {
 
   return (
     <form onSubmit={handleAddTask}>
-      <Box display="flex" flexDirection="row" gap={1}>
+      <Box
+        display="flex"
+        flexDirection="row"
+        gap={1}
+        alignItems="center"
+        justifyContent="space-between"
+      >
         <input
           type="text"
           value={task.title}
           placeholder="Ingresá una tarea"
           onChange={(e) => setTask({ ...task, title: e.target.value })}
+          style={{ width: "230px", height: "30px", border: "1px solid #fbf8fc" }}
         />
-        <Button type="submit" variant="contained" size="small">Add Task</Button>
+        <IconButton type="submit" variant="contained" size="small">
+          <RiAddCircleLine style={{ fontSize: "30px" }} />
+        </IconButton>
       </Box>
       {error && <p style={{ color: "red" }}>{error}</p>}
     </form>
