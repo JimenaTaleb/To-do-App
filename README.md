@@ -1,8 +1,26 @@
-# React + Vite
+# Proyecto To do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hola! Soy Jimena Taleb, tengo 30 años, vivo en Córdoba Capital y estudio en Ada ITW desarrollo Frontend.
+***
 
-Currently, two official plugins are available:
+### Descripción
+To do App es una aplicación que te permitirá crear tareas, señalizarlas como completas o pendientes y si lo deseas, eliminarlas.
+Lo mejor de todo es que si recargas la página, no perderás las tareas que hayas ingresado ya que se guardan localmente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+***
+
+### Herramientas
+- HTML5
+- Vite
+- ReactJs
+- React Icons
+- MUI- Material UI
+- Git
+- GitHub
+
+***
+
+## Deploy
+Se puede visualizar el proyecto desde cualquier naegador ingresando al siguiente link: 
+https://to-do-app-by-ji.vercel.app/
+
